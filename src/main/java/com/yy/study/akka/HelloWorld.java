@@ -15,11 +15,11 @@ public class HelloWorld extends UntypedActor {
 
     @Override
     public void onReceive(Object msg) {
-
+        System.out.print("HelloWorld.msg");
         if(msg == Greeter.Msg.DONE){
             getContext().stop(getSelf());
         }else{
-            System.out.print(msg);
+            System.out.print("HelloWorld.msg");
             unhandled(msg);
         }
 

@@ -12,6 +12,7 @@ public class Greeter extends UntypedActor {
      */
     @Override
     public void onReceive(Object msg) {
+        System.out.print("Greeter.msg");
         if(msg == Msg.GREET){
             System.out.println("Hello world");
             /**
@@ -23,7 +24,7 @@ public class Greeter extends UntypedActor {
              */
             getSender().tell(Msg.DONE, getSelf());
         }else{
-            System.out.print(msg);
+            System.out.print("Greeter.msg");
             unhandled(msg);
         }
 
